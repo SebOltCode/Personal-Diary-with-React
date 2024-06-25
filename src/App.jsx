@@ -1,6 +1,6 @@
-
+import DiaryPage from "./components/DiaryPage.jsx"  
 function App() {
-  return <><p>App</p></>
+  return <><DiaryPage/></>
   
 }
 
