@@ -1,21 +1,26 @@
 import { useState ,useEffect} from "react";
 import AddDiary from "./AddDiary.jsx";
 const DiaryPage=()=>{
-    const [addDiary,setAddDiary]=useState([{
-        Image: "https://static.giga.de/wp-content/uploads/2018/12/Google-logo-G-icon-symbol-2021-rcm1680x944u.jpg",
-            title: "Google",
-            content: "beste freund",
-            date: "22.02.2022",
-    }]);
     const [showDiary, setShowDiary] = useState(false);
     
-    let diaries = JSON.parse(localStorage.getItem("diaries")) || [];
+    let diaries = [];
+    const storedDiaries = localStorage.getItem("diaries");
+    if (storedDiaries) {
+        try {
+            diaries = JSON.parse(storedDiaries) || [];
+            if (!Array.isArray(diaries)) {
+                diaries = [];
+            }
+        } catch (e) {
+            diaries = [];
+        }
+    }
     useEffect(() => {
-        
+        showDiaries();
         function showDiaries() {
              diaries = JSON.parse(localStorage.getItem("diaries")) || [];
-            }showDiaries();
-    },[addDiary,showDiary]);
+            }
+    },[showDiary]);
     
     return (
             
@@ -52,11 +57,11 @@ const DiaryPage=()=>{
                             </div>
                         ))}
                 </div>
-                <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button self-center">hinzufügen</label>
+                <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button self-center m-9">hinzufügen</label>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                         <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-                        <AddDiary addDiary={addDiary} setAddDiary={setAddDiary}/>
+                        <AddDiary showDiary={showDiary} setShowDiary={setShowDiary}/>
                         </ul>
                 </div>
             </div>
