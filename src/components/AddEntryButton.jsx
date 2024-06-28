@@ -21,8 +21,7 @@ const DiaryButton = () => {
 
   const handleClick = () => {
     const today = new Date().toISOString().split('T')[0]; // Datum im YYYY-MM-DD format, eventuell anpassen je nachdem wie das Format im localStorage ist
-    const diaries = JSON.parse(localStorage.getItem('diaries')) || {}; // H: Holt sich die Diaries aus dem localStorage
-    const diaryEntry = diaries[today]; // H: Holt sich den Eintrag für heute und prüft diesen
+    const diaryEntry = localStorage.getItem(today);
 
     if (diaryEntry) {
       alert("Eintrag für heute bereits vorhanden, komm morgen wieder.");
