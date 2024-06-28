@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-
+import AddDiary from './AddDiary';
 // Platzhalter für das Formular damit ich unten einen return habe, muss dann noch ausgelagert 
 // und erweitert werden und dann unten als Prop eingefügt werden
-const DiaryEntryForm = ({ onClose }) => (
-  <div className="popup">
-    <div className="popup-content">
-      <h2>Neuer Tagebucheintrag</h2>
-      <form>
-        {/* Form Inhalt */}
-      </form>
-      <button onClick={onClose}>Safe</button>
-    </div>
-  </div>
-);
+// const DiaryEntryForm = ({ onClose }) => (
+//   <div className="popup">
+//     <div className="popup-content">
+//       <h2>Neuer Tagebucheintrag</h2>
+//       <form>
+//         {/* Form Inhalt */}
+//       </form>
+//       <button onClick={onClose}>Safe</button>
+//     </div>
+//   </div>
+// );
 
 
 
@@ -37,7 +37,7 @@ const DiaryButton = () => {
   return (
     <div>
       <button onClick={handleClick}>Tagebucheintrag hinzufügen</button>
-      {isPopupOpen && <DiaryEntryForm onClose={closePopup} />}
+      {isPopupOpen && <AddDiary onClose={closePopup} />}
     </div>
   );
 };

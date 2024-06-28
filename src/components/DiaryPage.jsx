@@ -1,5 +1,6 @@
 import { useState ,useEffect} from "react";
-import AddDiary from "./AddDiary.jsx";
+// import AddDiary from "./AddDiary.jsx";
+import DiaryButton from "./AddEntryButton.jsx";
 const DiaryPage=()=>{
     const [showDiary, setShowDiary] = useState(false);
     
@@ -61,7 +62,7 @@ const DiaryPage=()=>{
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                         <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-                        <AddDiary showDiary={showDiary} setShowDiary={setShowDiary}/>
+                        <DiaryButton />
                         </ul>
                 </div>
             </div>
