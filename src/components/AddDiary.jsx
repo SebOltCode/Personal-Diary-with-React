@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function AddDiary({ setShowDiary }) {
+function AddDiary({ setShowDiary, showDiary }) {
   const [title, setTitle] = useState('');
   const [date, setDate] = useState('');
   const [image, setImage] = useState('');
