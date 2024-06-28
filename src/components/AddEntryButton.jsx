@@ -1,18 +1,6 @@
 import React, { useState } from 'react';
 import AddDiary from './AddDiary';
-// Platzhalter für das Formular damit ich unten einen return habe, muss dann noch ausgelagert 
-// und erweitert werden und dann unten als Prop eingefügt werden
-// const DiaryEntryForm = ({ onClose }) => (
-//   <div className="popup">
-//     <div className="popup-content">
-//       <h2>Neuer Tagebucheintrag</h2>
-//       <form>
-//         {/* Form Inhalt */}
-//       </form>
-//       <button onClick={onClose}>Safe</button>
-//     </div>
-//   </div>
-// );
+
 
 
 
@@ -46,16 +34,3 @@ export default DiaryButton;
 
 
 
-// Für die main Seite zum einfügen der DiaryAddButton Komponente (Platzhalter):
-
-// import React from 'react';
-// import DiaryButton from './DiaryButton'; // Passe den Pfad entsprechend an
-
-// const App = () => (
-//   <div>
-//     <h1>Daily Diary</h1>
-//     <DiaryButton />
-//   </div>
-// );
-
-// export default App;

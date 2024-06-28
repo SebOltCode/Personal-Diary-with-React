@@ -1,5 +1,4 @@
 import { useState ,useEffect} from "react";
-// import AddDiary from "./AddDiary.jsx";
 import DiaryButton from "./AddEntryButton.jsx";
 const DiaryPage=()=>{
     const [showDiary, setShowDiary] = useState(false);
