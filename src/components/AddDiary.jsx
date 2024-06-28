@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function AddDiary({ setShowDiary }) {
+function AddDiary({setShowDiary}) {
   const [title, setTitle] = useState('');
   const [date, setDate] = useState('');
   const [image, setImage] = useState('');
@@ -11,7 +11,7 @@ function AddDiary({ setShowDiary }) {
     const diaries = JSON.parse(localStorage.getItem('diaries')) || []; // Holt sich die Diaries aus dem localStorage
     diaries.push(newDiary);
     localStorage.setItem('diaries', JSON.stringify(diaries));
-    setShowDiary(true); // Trigger reload
+    setShowDiary(true);
   };
 
   return (
