@@ -5,7 +5,10 @@ import React, { useState } from "react";
 -- className / Tailwind für das Styling hinzufügen
 -- der Key muss noch zugeteilt werden 
 -- muss useState noch genutzt werden?
+
 --  */
+
+const [inputStorage, setInputStorage] = useState("");
 
 const DelThisEntry = (id) => {
   const removeThisItem = (id) => {
@@ -14,7 +17,6 @@ const DelThisEntry = (id) => {
     if (userConfirmed) {
       const getStorage = JSON.parse(localStorage.getItem("diaries")) || [];
       /* objArray muss durch - Key - Name des localStorage getauscht werden  */
-      console.log(getStorage);
 
       const updArray = getStorage.filter((item) => item.date !== id.id);
 
